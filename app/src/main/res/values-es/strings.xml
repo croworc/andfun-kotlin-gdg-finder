@@ -31,4 +31,6 @@
     <string name="submitted">Enviado, no hay necesidad de enviar de nuevo.</string>
     <string name="done">Hecho</string>
     <string name="submit">Enviar</string>
+    <string name="img_desc_audience">Imagen de escenario con audienca</string>
+    <string name="img_gdg_organizer">Grupo de mujeres organizadoras</string>
 </resources>
