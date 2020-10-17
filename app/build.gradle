@@ -78,6 +78,8 @@ dependencies {
     // Core with Ktx
     implementation "androidx.core:core-ktx:$version_core"
 
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
+
     // Moshi
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
