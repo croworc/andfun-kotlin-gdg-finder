@@ -23,6 +23,21 @@ apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 30
+
+    compileOptions{
+        // Flag to enable support for the new language APIs, even for SDKs below 21
+        coreLibraryDesugaringEnabled true
+
+        // Enable using Java 8 features
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    // Enable using Java 8 features for Kotlin projects
+    kotlinOptions{
+        jvmTarget = "1.8"
+    }
+
     buildFeatures {
         dataBinding true
     }
@@ -55,7 +70,7 @@ dependencies {
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
     // Use viewModelScope from lifecycle-viewmodel-ktx
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-beta01'
 
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
@@ -63,6 +78,9 @@ dependencies {
 
     // Core with Ktx
     implementation "androidx.core:core-ktx:$version_core"
+
+    // Using JDK 1.8 features (streams, lambdas, etc.)
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
 
     // Moshi
     implementation "com.squareup.moshi:moshi:$version_moshi"
